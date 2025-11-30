@@ -63,7 +63,7 @@ public final class TransaccionDomain extends Domain {
         this.monto = monto;
     }
 
-    private void setFecha(final LocalDateTime fecha) {
+    public void setFecha(final LocalDateTime fecha) {
         this.fecha = fecha;
     }
 

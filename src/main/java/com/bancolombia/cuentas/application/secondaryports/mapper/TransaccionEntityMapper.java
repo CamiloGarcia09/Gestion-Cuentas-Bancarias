@@ -14,15 +14,6 @@ import java.util.List;
 )
 public interface TransaccionEntityMapper {
 
-    //Puedo quitar el mapper si los atributos son identicos
-    @Mappings({
-            @Mapping(source = "id",              target = "id"),
-            @Mapping(source = "tipoTransaccion", target = "tipoTransaccion"),
-            @Mapping(source = "descripcion",     target = "descripcion"),
-            @Mapping(source = "monto",           target = "monto"),
-            @Mapping(source = "fecha",           target = "fecha"),
-            @Mapping(source = "cuenta",          target = "cuenta")
-    })
     TransaccionEntity toEntity(TransaccionDomain domain);
 
     @InheritInverseConfiguration

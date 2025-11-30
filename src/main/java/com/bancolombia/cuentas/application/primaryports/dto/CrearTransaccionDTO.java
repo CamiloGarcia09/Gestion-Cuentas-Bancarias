@@ -5,7 +5,6 @@ import com.bancolombia.cuentas.crosscutting.helpers.UUIDHelper;
 import com.bancolombia.cuentas.domain.transaccion.enums.TipoTransaccion;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 public final class CrearTransaccionDTO {
@@ -14,20 +13,19 @@ public final class CrearTransaccionDTO {
     private TipoTransaccion tipoTransaccion;
     private BigDecimal monto;
     private String descripcion;
-    private LocalDateTime fecha;
+
 
     public CrearTransaccionDTO(final UUID cuentaId, final TipoTransaccion tipoTransaccion, final BigDecimal monto,
-                               final String descripcion, final LocalDateTime fecha) {
+                               final String descripcion) {
         setCuentaId(cuentaId);
         setTipoTransaccion(tipoTransaccion);
         setMonto(monto);
         setDescripcion(descripcion);
-        setFecha(fecha);
     }
 
     public CrearTransaccionDTO create (final UUID cuentaId, final TipoTransaccion tipoTransaccion, final BigDecimal monto,
-                               final String descripcion, final LocalDateTime fecha) {
-        return new CrearTransaccionDTO(cuentaId, tipoTransaccion, monto, descripcion, fecha);
+                               final String descripcion) {
+        return new CrearTransaccionDTO(cuentaId, tipoTransaccion, monto, descripcion);
     }
 
     public UUID getCuentaId() {
@@ -46,10 +44,6 @@ public final class CrearTransaccionDTO {
         return descripcion;
     }
 
-    public LocalDateTime getFecha() {
-        return fecha;
-    }
-
     public void setCuentaId(final UUID cuentaId) {
         this.cuentaId = UUIDHelper.getDefault(cuentaId, UUIDHelper.getDefault());
     }
@@ -66,7 +60,4 @@ public final class CrearTransaccionDTO {
         this.descripcion = TextHelper.applyTrim(descripcion);
     }
 
-    public void setFecha(final LocalDateTime fecha) {
-        this.fecha = fecha == null ? LocalDateTime.now() : fecha;
-    }
 }
