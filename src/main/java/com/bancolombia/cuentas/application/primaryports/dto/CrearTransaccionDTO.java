@@ -24,7 +24,7 @@ public final class CrearTransaccionDTO {
     }
 
     public CrearTransaccionDTO create (final UUID cuentaId, final TipoTransaccion tipoTransaccion, final BigDecimal monto,
-                               final String descripcion) {
+                                       final String descripcion) {
         return new CrearTransaccionDTO(cuentaId, tipoTransaccion, monto, descripcion);
     }
 

@@ -28,10 +28,8 @@ public class CrearCuentaController {
         var cuentaResponse = new CrearCuentaResponse();
 
         try {
-
             crearCuentaInteractor.execute(dto);
             cuentaResponse.getMensajes().add("Cuenta creada correctamente...");
-
 
         } catch (final Exception excepcion) {
             httpStatusCode = HttpStatus.BAD_REQUEST;

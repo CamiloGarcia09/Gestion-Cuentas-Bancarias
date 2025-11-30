@@ -28,10 +28,8 @@ public class CrearTransaccionController {
         var transaccionResponse = new CrearTransaccionResponse();
 
         try {
-
             crearTransaccionInteractor.execute(dto);
             transaccionResponse.getMensajes().add("Transaccion realizada correctamente...");
-
 
         } catch (final Exception excepcion) {
             httpStatusCode = HttpStatus.BAD_REQUEST;

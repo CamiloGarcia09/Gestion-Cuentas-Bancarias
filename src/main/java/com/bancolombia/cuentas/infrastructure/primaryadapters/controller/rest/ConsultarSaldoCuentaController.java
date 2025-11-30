@@ -33,6 +33,7 @@ public class ConsultarSaldoCuentaController {
             ConsultarSaldoCuentaDTO dto = consultarSaldoCuentaInteractor.execute(id);
             response.setDatos(Collections.singletonList(dto));
             response.getMensajes().add("Consulta realizada correctamente...");
+
         } catch (final Exception e) {
             httpStatus = HttpStatus.BAD_REQUEST;
             response.getMensajes().add("Ocurrió un error consultando el saldo.");
