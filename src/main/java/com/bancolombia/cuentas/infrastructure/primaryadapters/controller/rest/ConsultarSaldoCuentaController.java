@@ -26,19 +26,14 @@ public class ConsultarSaldoCuentaController {
     @GetMapping("/{id}/saldo")
     public ResponseEntity<ConsultarSaldoCuentaResponse> execute(@PathVariable final UUID id) {
 
-        var httpStatus = HttpStatus.ACCEPTED;
         var response = new ConsultarSaldoCuentaResponse();
 
-        try {
-            ConsultarSaldoCuentaDTO dto = consultarSaldoCuentaInteractor.execute(id);
-            response.setDatos(Collections.singletonList(dto));
-            response.getMensajes().add("Consulta realizada correctamente...");
+        ConsultarSaldoCuentaDTO dto = consultarSaldoCuentaInteractor.execute(id);
+        response.setDatos(Collections.singletonList(dto));
+        response.getMensajes().add("Consulta realizada correctamente...");
 
-        } catch (final Exception e) {
-            httpStatus = HttpStatus.BAD_REQUEST;
-            response.getMensajes().add("Ocurrió un error consultando el saldo.");
-        }
+        return new ResponseEntity<>(response, HttpStatus.ACCEPTED);
 
-        return new ResponseEntity<>(response, httpStatus);
+
     }
 }

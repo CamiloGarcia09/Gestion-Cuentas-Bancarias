@@ -41,6 +41,6 @@ public final class CrearCuentaDTO {
     }
 
     public void setSaldoInicial(final BigDecimal saldoInical) {
-        this.saldoInicial = saldoInical == null ? BigDecimal.ZERO : saldoInical;
+        this.saldoInicial = saldoInical;
     }
 }

@@ -1,7 +1,6 @@
 package com.bancolombia.cuentas.application.usecase.creartransaccion.impl;
 
 import com.bancolombia.cuentas.application.secondaryports.mapper.TransaccionEntityMapper;
-import com.bancolombia.cuentas.application.secondaryports.repository.CuentaRepository;
 import com.bancolombia.cuentas.application.secondaryports.repository.TransaccionRepository;
 import com.bancolombia.cuentas.application.usecase.creartransaccion.CrearTransaccion;
 import com.bancolombia.cuentas.application.usecase.creartransaccion.validator.CrearTransasccionRulesValidator;

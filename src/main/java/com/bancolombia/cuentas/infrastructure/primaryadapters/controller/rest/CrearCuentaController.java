@@ -24,20 +24,13 @@ public class CrearCuentaController {
     @PostMapping
     public ResponseEntity<CrearCuentaResponse> execute(@RequestBody CrearCuentaDTO dto) {
 
-        var httpStatusCode = HttpStatus.ACCEPTED;
         var cuentaResponse = new CrearCuentaResponse();
 
-        try {
-            crearCuentaInteractor.execute(dto);
-            cuentaResponse.getMensajes().add("Cuenta creada correctamente...");
+        crearCuentaInteractor.execute(dto);
+        cuentaResponse.getMensajes().add("Cuenta creada correctamente...");
 
-        } catch (final Exception excepcion) {
-            httpStatusCode = HttpStatus.BAD_REQUEST;
-            cuentaResponse.getMensajes().add("Ocurrio un error creando la cuenta");
+        return new ResponseEntity<>(cuentaResponse, HttpStatus.ACCEPTED);
 
-        }
-
-        return new ResponseEntity<>(cuentaResponse, httpStatusCode);
     }
 
 }
