@@ -27,7 +27,7 @@ public final class CrearCuentaNombreTitularRulesValidatorImpl implements CrearCu
     }
 
     @Override
-    public void validate(CuentaDomain data) {
+    public void validate(final CuentaDomain data) {
         nombreTitularFormatRule.validate(data);
         nombreTitularLengthRule.validate(data);
         nombreTitularNotEmptyRule.validate(data);

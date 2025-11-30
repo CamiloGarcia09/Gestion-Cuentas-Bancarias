@@ -21,6 +21,14 @@ public final class CuentaDomain extends Domain {
         return new CuentaDomain(id, numeroCuenta, nombreTitular, saldo);
     }
 
+    public void incrementarSaldo(BigDecimal monto) {
+        this.saldo = this.saldo.add(monto);
+    }
+
+    public void decrementarSaldo(BigDecimal monto) {
+        this.saldo = this.saldo.subtract(monto);
+    }
+
     public String getNumeroCuenta() {
         return numeroCuenta;
     }

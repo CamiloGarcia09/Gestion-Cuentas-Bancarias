@@ -28,7 +28,6 @@ public final class ConsultarSaldoCuentaImpl implements ConsultarSaldoCuenta {
     @Override
     public CuentaDomain execute(UUID domain) {
         consultarSaldoCuentaRulesValidator.validate(domain);
-
         final var resultado = cuentaRepository.findById(domain).orElseThrow(() -> new RuntimeException("Cuenta no entontrada"));
         return cuentaEntityMapper.toDomain(resultado);
     }

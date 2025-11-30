@@ -24,20 +24,13 @@ public class CrearTransaccionController {
     @PostMapping
     public ResponseEntity<CrearTransaccionResponse> execute(@RequestBody CrearTransaccionDTO dto) {
 
-        var httpStatusCode = HttpStatus.ACCEPTED;
         var transaccionResponse = new CrearTransaccionResponse();
 
-        try {
-            crearTransaccionInteractor.execute(dto);
-            transaccionResponse.getMensajes().add("Transaccion realizada correctamente...");
+        crearTransaccionInteractor.execute(dto);
+        transaccionResponse.getMensajes().add("Transaccion realizada correctamente...");
 
-        } catch (final Exception excepcion) {
-            httpStatusCode = HttpStatus.BAD_REQUEST;
-            transaccionResponse.getMensajes().add("Ocurrio un error realizando la transaccion");
+        return new ResponseEntity<>(transaccionResponse, HttpStatus.ACCEPTED);
 
-        }
-
-        return new ResponseEntity<>(transaccionResponse, httpStatusCode);
     }
 
 }

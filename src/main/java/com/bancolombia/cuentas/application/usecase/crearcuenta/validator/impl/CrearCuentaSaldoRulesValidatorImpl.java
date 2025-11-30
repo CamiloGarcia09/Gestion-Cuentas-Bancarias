@@ -20,7 +20,7 @@ public final class CrearCuentaSaldoRulesValidatorImpl implements CrearCuentaSald
     }
 
     @Override
-    public void validate(CuentaDomain data) {
+    public void validate(final CuentaDomain data) {
         saldoInicialNotNullRule.validate(data);
         saldoInicialPositiveRule.validate(data);
     }

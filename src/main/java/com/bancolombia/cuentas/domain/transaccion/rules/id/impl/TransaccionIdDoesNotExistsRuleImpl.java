@@ -1,8 +1,8 @@
-package com.bancolombia.cuentas.domain.transaccion.rules.impl;
+package com.bancolombia.cuentas.domain.transaccion.rules.id.impl;
 
 import com.bancolombia.cuentas.application.secondaryports.repository.TransaccionRepository;
-import com.bancolombia.cuentas.domain.transaccion.exceptions.TransaccionIdDoesExistsException;
-import com.bancolombia.cuentas.domain.transaccion.rules.TransaccionIdDoesNotExistsRule;
+import com.bancolombia.cuentas.domain.transaccion.exceptions.id.TransaccionIdDoesExistsException;
+import com.bancolombia.cuentas.domain.transaccion.rules.id.TransaccionIdDoesNotExistsRule;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;

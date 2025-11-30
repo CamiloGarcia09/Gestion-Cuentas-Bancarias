@@ -1,4 +1,4 @@
-package com.bancolombia.cuentas.domain.transaccion.exceptions;
+package com.bancolombia.cuentas.domain.transaccion.exceptions.id;
 
 public final class TransaccionIdDoesExistsException extends IllegalArgumentException {
 

@@ -1,4 +1,4 @@
-package com.bancolombia.cuentas.domain.transaccion.rules;
+package com.bancolombia.cuentas.domain.transaccion.rules.id;
 
 import com.bancolombia.cuentas.domain.DomainRule;
 

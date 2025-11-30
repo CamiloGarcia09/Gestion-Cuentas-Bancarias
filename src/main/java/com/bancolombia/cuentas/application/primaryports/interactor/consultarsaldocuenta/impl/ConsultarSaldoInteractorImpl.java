@@ -17,11 +17,11 @@ public class ConsultarSaldoInteractorImpl implements ConsultarSaldoCuentaInterac
     private final ConsultarSaldoCuenta consultarSaldo;
     private final ConsultarSaldoCuentaDTOMapper consultarSaldoCuentaDTOMapper;
 
-    public ConsultarSaldoInteractorImpl(final ConsultarSaldoCuenta consultarSaldo, final ConsultarSaldoCuentaDTOMapper consultarSaldoCuentaDTOMapper) {
+    public ConsultarSaldoInteractorImpl(final ConsultarSaldoCuenta consultarSaldo,
+                                        final ConsultarSaldoCuentaDTOMapper consultarSaldoCuentaDTOMapper) {
         this.consultarSaldo = consultarSaldo;
         this.consultarSaldoCuentaDTOMapper = consultarSaldoCuentaDTOMapper;
     }
-
 
     @Override
     public ConsultarSaldoCuentaDTO execute(UUID data) {

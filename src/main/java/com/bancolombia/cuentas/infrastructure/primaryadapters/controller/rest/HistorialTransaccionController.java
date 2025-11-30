@@ -26,19 +26,17 @@ public class HistorialTransaccionController {
     @GetMapping("/{id}/transacciones")
     public ResponseEntity<HistorialTransaccionResponse> execute(@PathVariable final UUID id) {
 
-        var httpStatus = HttpStatus.ACCEPTED;
         var response = new HistorialTransaccionResponse();
 
-        try {
-            List<HistorialTransaccionDTO> transacciones = historialTransaccionInteractor.execute(id);
-            response.setDatos(transacciones);
+        List<HistorialTransaccionDTO> transacciones = historialTransaccionInteractor.execute(id);
+        response.setDatos(transacciones);
+        if (transacciones.isEmpty()) {
+            response.getMensajes().add("La cuenta no tiene transacciones registradas.");
+        }else {
             response.getMensajes().add("Historial de Transacciones consultado correctamente...");
-
-        } catch (final Exception e) {
-            httpStatus = HttpStatus.BAD_REQUEST;
-            response.getMensajes().add("Ocurrió un error consultando el historial.");
         }
 
-        return new ResponseEntity<>(response, httpStatus);
+        return new ResponseEntity<>(response, HttpStatus.ACCEPTED);
+
     }
 }

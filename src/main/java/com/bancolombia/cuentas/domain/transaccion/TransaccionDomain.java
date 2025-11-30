@@ -26,9 +26,13 @@ public final class TransaccionDomain extends Domain {
         setCuenta(cuenta);
     }
 
-    public static TransaccionDomain create (UUID id, TipoTransaccion tipoTransaccion, String descripcion,
-                                            BigDecimal monto, LocalDateTime fecha, CuentaDomain cuenta) {
+    public static TransaccionDomain create(UUID id, TipoTransaccion tipoTransaccion, String descripcion,
+                                           BigDecimal monto, LocalDateTime fecha, CuentaDomain cuenta) {
         return new TransaccionDomain(id, tipoTransaccion, descripcion, monto, fecha, cuenta);
+    }
+
+    public void asignarCuenta(CuentaDomain cuenta) {
+        this.cuenta = cuenta;
     }
 
     public TipoTransaccion getTipoTransaccion() {

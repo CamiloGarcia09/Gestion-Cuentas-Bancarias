@@ -49,7 +49,7 @@ public final class CrearTransaccionDTO {
     }
 
     public void setTipoTransaccion(final TipoTransaccion tipoTransaccion) {
-        this.tipoTransaccion = tipoTransaccion == null ? TipoTransaccion.defaultValue() : tipoTransaccion;
+        this.tipoTransaccion = tipoTransaccion;
     }
 
     public void setMonto(final BigDecimal monto) {
