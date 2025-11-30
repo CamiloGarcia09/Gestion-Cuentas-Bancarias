@@ -5,7 +5,7 @@ import com.bancolombia.cuentas.infrastructure.primaryadapters.controller.Respons
 
 import java.util.ArrayList;
 
-public final class CrearCuentaResponse extends Response  <CrearCuentaDTO>{
+public final class CrearCuentaResponse extends Response <CrearCuentaDTO>{
 
     public CrearCuentaResponse(){
         setMensajes(new ArrayList<>());

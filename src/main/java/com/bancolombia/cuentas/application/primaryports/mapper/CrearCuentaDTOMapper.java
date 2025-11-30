@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
-public interface CuentaDTOMapper {
+public interface CrearCuentaDTOMapper {
 
     @Mapping(source = "saldoInicial", target = "saldo")
     CuentaDomain toDomain(CrearCuentaDTO dto);
