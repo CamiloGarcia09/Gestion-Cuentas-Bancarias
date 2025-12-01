@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "e032944d-3c2d-4612-a352-87afd4d4249b",
+		"name": "Prueba Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37340473"
+	},
+	"item": [
+		{
+			"name": "CrearCuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroCuenta\": \"84567916325\",\r\n  \"nombreTitular\": \"Sara Elizabeth\",\r\n  \"saldoInicial\": 5000000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarSaldo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cuentas/33e2f0c2-badf-4717-8e89-fe935b16e02e/saldo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cuentas",
+						"33e2f0c2-badf-4717-8e89-fe935b16e02e",
+						"saldo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearTransaccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cuentaId\": \"33e2f0c2-badf-4717-8e89-fe935b16e02e\",\r\n  \"tipoTransaccion\": \"RETIRO\",\r\n  \"monto\": 50000,\r\n  \"descripcion\": \"Desayuno\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/transacciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"transacciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HistorialTransacciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/33e2f0c2-badf-4717-8e89-fe935b16e02e/transacciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"33e2f0c2-badf-4717-8e89-fe935b16e02e",
+						"transacciones"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
