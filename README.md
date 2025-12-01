@@ -159,7 +159,18 @@ A continuación se describen los endpoints principales expuestos por la API para
 }
 
 ```
+---
+## 🚀 Instalación
 
+Este microservicio utiliza **H2 en modo file** como base de datos embebida, por lo que no requiere instalar PostgreSQL, Docker ni configurar servicios externos. Solo necesitas Java y Maven instalados.
+
+
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/CamiloGarcia09/Gestion-Cuentas-Bancarias.git
+
+```
 ---
 
 ## 👨‍💻 Autor
