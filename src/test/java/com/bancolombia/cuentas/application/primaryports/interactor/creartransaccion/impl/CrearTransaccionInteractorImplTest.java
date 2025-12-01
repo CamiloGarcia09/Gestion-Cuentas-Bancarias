@@ -2,7 +2,7 @@ package com.bancolombia.cuentas.application.primaryports.interactor.creartransac
 
 import com.bancolombia.cuentas.application.primaryports.dto.CrearTransaccionDTO;
 import com.bancolombia.cuentas.application.primaryports.mapper.CrearTransaccionDTOMapper;
-import com.bancolombia.cuentas.application.usecase.creartransaccion.impl.CrearTransaccion;
+import com.bancolombia.cuentas.application.usecase.creartransaccion.CrearTransaccion;
 import com.bancolombia.cuentas.domain.cuenta.CuentaDomain;
 import com.bancolombia.cuentas.domain.transaccion.TransaccionDomain;
 import com.bancolombia.cuentas.domain.transaccion.enums.TipoTransaccion;

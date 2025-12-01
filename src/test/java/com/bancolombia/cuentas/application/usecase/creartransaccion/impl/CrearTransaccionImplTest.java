@@ -5,8 +5,7 @@ import com.bancolombia.cuentas.application.secondaryports.mapper.CuentaEntityMap
 import com.bancolombia.cuentas.application.secondaryports.mapper.TransaccionEntityMapper;
 import com.bancolombia.cuentas.application.secondaryports.repository.CuentaRepository;
 import com.bancolombia.cuentas.application.secondaryports.repository.TransaccionRepository;
-import com.bancolombia.cuentas.application.usecase.creartransaccion.impl.impl.CrearTransaccionImpl;
-import com.bancolombia.cuentas.application.usecase.creartransaccion.impl.validator.CrearTransasccionRulesValidator;
+import com.bancolombia.cuentas.application.usecase.creartransaccion.validator.CrearTransasccionRulesValidator;
 import com.bancolombia.cuentas.domain.cuenta.CuentaDomain;
 import com.bancolombia.cuentas.domain.cuenta.exceptions.id.CuentaIdDoesExistsException;
 import com.bancolombia.cuentas.domain.event.TransaccionCreadaEvent;
