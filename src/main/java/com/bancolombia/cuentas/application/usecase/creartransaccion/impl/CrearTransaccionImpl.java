@@ -9,7 +9,6 @@ import com.bancolombia.cuentas.application.usecase.creartransaccion.validator.Cr
 import com.bancolombia.cuentas.domain.cuenta.exceptions.id.CuentaIdDoesExistsException;
 import com.bancolombia.cuentas.domain.event.TransaccionCreadaEvent;
 import com.bancolombia.cuentas.domain.transaccion.TransaccionDomain;
-import jakarta.transaction.Transactional;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
